@@ -6,8 +6,9 @@
   <ItemGroup>
     <Compile Include="API\API_1.fs" />
     <Compile Include="API\API_2.fs" />
-    <Compile Include="API\API_3.fs" />
+    <Compile Include="DataProcessing\IssueData.fs" />
     <Compile Include="DataProcessing\DataProcessing_1.fs" />
+    <Compile Include="DataProcessing\DataProcessing_2.fs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="host.json">
@@ -26,6 +27,7 @@
     <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.CosmosDB" Version="3.0.7" />
     <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.Storage" Version="4.0.2" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.7" />
+    <PackageReference Include="Microsoft.FSharpLu.Json" Version="0.11.6" />
     <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="3.0.9" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="Octokit" Version="0.48.0" />

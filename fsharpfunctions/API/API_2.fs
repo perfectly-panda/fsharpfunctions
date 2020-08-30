@@ -1,4 +1,4 @@
-namespace fsharpfunctions
+namespace FSharpFunctions
 
 open Microsoft.Azure.WebJobs
 open Microsoft.Azure.WebJobs.Extensions.Http
@@ -11,7 +11,7 @@ open System.Data
 
 module API_2 =
 
-    let connectionString = @"" + Environment.GetEnvironmentVariable("dbConnection")
+    let connectionString = @"" + Environment.GetEnvironmentVariable "dbConnection"
 
     type Color = {
         Name   : string

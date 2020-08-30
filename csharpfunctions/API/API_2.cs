@@ -19,7 +19,7 @@ namespace csharpfunctions
         {
             log.LogInformation("C# API 2 function processed a request.");
 
-            using(var conn = new SqlConnection(Environment.GetEnvironmentVariable("dbConnection")))
+            using(var conn = new SqlConnection(Environment.GetEnvironmentVariable("SQLDBConnection")))
             {
                 var sql = "SELECT * FROM dbo.Colors";
                 return await conn.QueryAsync(sql);

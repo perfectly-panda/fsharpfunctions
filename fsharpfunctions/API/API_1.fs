@@ -1,4 +1,4 @@
-namespace fsharpfunctions
+﻿namespace FSharpFunctions
 
 open Microsoft.AspNetCore.Mvc
 open Microsoft.Azure.WebJobs
