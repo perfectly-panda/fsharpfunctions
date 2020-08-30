@@ -1,6 +1,5 @@
-namespace Company.Function
+namespace fsharpfunctions
 
-open System
 open Microsoft.AspNetCore.Mvc
 open Microsoft.Azure.WebJobs
 open Microsoft.Azure.WebJobs.Extensions.Http

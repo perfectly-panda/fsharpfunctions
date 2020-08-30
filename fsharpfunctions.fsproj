@@ -5,6 +5,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="API\API_1.fs" />
+    <Compile Include="API\API_2.fs" />
+    <Compile Include="API\API_3.fs" />
+    <Compile Include="DataProcessing\DataProcessing_1.fs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="host.json">
@@ -15,7 +18,14 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="3.0.7" />
+    <PackageReference Include="Dapper" Version="2.0.35" />
+    <PackageReference Include="FSharp.Control.AsyncSeq" Version="3.0.1" />
+    <PackageReference Include="FSharp.Data.SqlClient" Version="2.0.6" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Azure.WebJobs" Version="3.0.18" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.7" />
+    <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="3.0.9" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
   </ItemGroup>
   <ItemGroup>
     <None Update="host.json">
@@ -25,5 +35,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <CopyToPublishDirectory>Never</CopyToPublishDirectory>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Update="FSharp.Core" Version="4.7.2" />
   </ItemGroup>
 </Project>
