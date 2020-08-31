@@ -11,7 +11,7 @@ type IssueData = {
     EntryType: EntryType //we know what possible values are
     Timestamp: DateTime
     TotalOpenIssues: int
-    MissingTags: option<int>
+    MissingTags: int
     CountByPriority: option<Map<string, int>> //immutable key-value store
     CountByService: option<Map<string, int>>
 }

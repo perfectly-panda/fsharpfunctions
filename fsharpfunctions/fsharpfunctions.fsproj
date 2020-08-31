@@ -7,8 +7,11 @@
     <Compile Include="API\API_1.fs" />
     <Compile Include="API\API_2.fs" />
     <Compile Include="DataProcessing\IssueData.fs" />
+    <Compile Include="DataProcessing\IssueDataV2.fs" />
     <Compile Include="DataProcessing\DataProcessing_1.fs" />
     <Compile Include="DataProcessing\DataProcessing_2.fs" />
+    <Compile Include="DataProcessing\DataProcessing_3.fs" />
+    <Compile Include="DataProcessing\DataProcessing_4.fs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="host.json">

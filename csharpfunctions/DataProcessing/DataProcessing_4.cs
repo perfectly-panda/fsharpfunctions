@@ -41,17 +41,8 @@ namespace csharpfunctions.DataProcessing
 
             log.LogInformation(client.GetLastApiInfo().RateLimit.Remaining.ToString());
 
-            var byPriority = openIssues.Items
-                .SelectMany(o => o.Labels)
-                .Where(l => l.Name.Contains("Pri"))
-                .GroupBy(p => p.Name)
-                .ToDictionary(g => g.Key, g => g.Count());
-
-            var byService = openIssues.Items
-                .SelectMany(o => o.Labels)
-                .Where(l => l.Name.EndsWith("/svc"))
-                .GroupBy(p => p.Name.CleanServiceName())
-                .ToDictionary(g => g.Key, g => g.Count());
+            var byPriority = GetIssueCount(openIssues.Items, "Pri")
+                .ToDictionary(g => g.Key.Remove(0, 3), g => g.Count());
 
             var serviceCount = new Dictionary<string, ItemCount>();
 
@@ -111,6 +102,13 @@ namespace csharpfunctions.DataProcessing
         private static string CleanServiceName(this string str)
         {
             return str.Substring(0, str.LastIndexOf('/'));
+        }
+
+        private static IEnumerable<IGrouping<string, Label>> GetIssueCount(IReadOnlyList<Issue> issues, string labelCheck)
+        {
+            return issues.SelectMany(o => o.Labels)
+                .Where(l => l.Name.Contains(labelCheck))
+                .GroupBy(p => p.Name);
         }
     }
 }
