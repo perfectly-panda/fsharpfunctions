@@ -8,7 +8,7 @@ type SubService = {Name: string; Count: int}
 type Service = {Name: string; Count: int; SubServiceCounts: option<list<SubService>>}
 
 type IssueDataV2 = {
-    Id: string
+    id: string
     Source: Source
     EntryType: EntryType //we know what possible values are
     Timestamp: DateTime

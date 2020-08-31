@@ -32,7 +32,7 @@ module DataProcessing_1 =
           
 
             let document = {
-                Id = Guid.NewGuid().ToString(); 
+                id = Guid.NewGuid().ToString(); 
                 Source = FSharp; 
                 EntryType = CountOnly; 
                 Timestamp = DateTime.UtcNow;

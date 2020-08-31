@@ -21,7 +21,7 @@ namespace csharpfunctions.DataProcessing
             log.LogInformation($"C# DataProcessing_1 function executed at: {DateTime.Now}");
 
             var client = new GitHubClient(new ProductHeaderValue("fsharpfunctions"));
-            var tokenAuth = new Credentials(Environment.GetEnvironmentVariable("GithubToken")); // NOTE: not real token
+            var tokenAuth = new Credentials(Environment.GetEnvironmentVariable("GithubToken"));
             client.Credentials = tokenAuth;
 
             log.LogInformation("Retrieving Github Issues");
@@ -32,6 +32,7 @@ namespace csharpfunctions.DataProcessing
                 Type = IssueTypeQualifier.Issue,
                 State = ItemState.Open
             };
+
             request.Repos.Add("MicrosoftDocs", "azure-docs");
             var openIssues = await client.Search.SearchIssues(request);
             log.LogInformation($"Retrieved {openIssues.Items.Count()} Issues");;

@@ -6,7 +6,7 @@ type EntryType = CountOnly | ByPriority | ByService | BySubService
 type Source = CSharp | FSharp
 
 type IssueData = {
-    Id: string
+    id: string
     Source: Source
     EntryType: EntryType //we know what possible values are
     Timestamp: DateTime

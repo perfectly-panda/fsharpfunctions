@@ -41,7 +41,7 @@ module DataProcessing_2 =
           
 
             let document = {
-                Id = Guid.NewGuid().ToString(); 
+                id = Guid.NewGuid().ToString(); 
                 Source = FSharp; 
                 EntryType = ByPriority; 
                 Timestamp = DateTime.UtcNow;
