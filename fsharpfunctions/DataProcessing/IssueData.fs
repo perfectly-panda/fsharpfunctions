@@ -5,6 +5,10 @@ type EntryType = CountOnly | ByPriority | ByService | BySubService
 
 type Source = CSharp | FSharp
 
+(*
+    option = Some<T> | None
+*)
+
 type IssueData = {
     id: string
     Source: Source

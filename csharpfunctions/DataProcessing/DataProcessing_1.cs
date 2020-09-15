@@ -42,7 +42,7 @@ namespace csharpfunctions.DataProcessing
             
             var document = new IssueData()
             {
-                Id = Guid.NewGuid().ToString(),
+                id = Guid.NewGuid().ToString(),
                 Source = "CSharp",
                 EntryType = "CountOnly",
                 Timestamp = DateTime.UtcNow,
